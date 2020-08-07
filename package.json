@@ -1,0 +1,14 @@
+{
+  "name": "inject-pm",
+  "version": "1.0.0",
+  "description": "The singleton injection container independent of the framework can be applied to any js framework or project of react vue to realize multi-module data state sharing and singletonization of control classes. Because react is one-way binding inject-react to support react components separately State sharing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "inject-pm"
+  ],
+  "author": "zhangchong",
+  "license": "ISC"
+}
