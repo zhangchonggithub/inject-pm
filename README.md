@@ -10,6 +10,10 @@ export default class ViewPM {
              message:"共享数据"
          };
     }
+    
+    changeMessage(){
+       this.data.message = "共享数据变化" ;
+    }
 }
 2.添加VUE视图1，并使用控制类共享状态
 <script>
@@ -19,16 +23,12 @@ export default class ViewPM {
         data() {
             this.viewPM = Inject.getClass(ViewPM);//通过注入获得单例类
             return this.viewPM.data;
-        } ,
-        method:{
-        changeMessage(){
-        
-        }
+        }  
     }
 </script>
 <template>
   <div>{{title}}</div>
-  <div @click="changeMessage()">{{message}}</div> 
+  <div @click="viewPM.changeMessage()">{{message}}</div> 
 </template>  
 
 3.添加VUE视图2，并使用控制类共享状态
